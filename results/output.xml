@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20230120 16:53:05.707" rpa="false" schemaversion="3">
+<suite id="s1" name="Keyword Avec Return Argument" source="C:\Users\dell\Desktop\robot_keywords_project\test_cases\keyword_avec_return_argument.robot">
+<test id="s1-t1" name="Login test" line="12">
+<kw name="Lancer le navigateur">
+<var>${Titre}</var>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL1}</arg>
+<arg>${BROWSER1}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230120 16:53:06.287" level="INFO">Opening browser 'chrome' to base url 'https://admin-demo.nopcommerce.com/login'.</msg>
+<status status="PASS" starttime="20230120 16:53:06.286" endtime="20230120 16:53:11.738"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230120 16:53:11.739" endtime="20230120 16:53:11.868"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${Titre_page}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230120 16:53:11.876" level="INFO">${Titre_page} = Your store. Login</msg>
+<status status="PASS" starttime="20230120 16:53:11.868" endtime="20230120 16:53:11.876"/>
+</kw>
+<return>
+<value>${Titre_page}</value>
+<status status="PASS" starttime="20230120 16:53:11.876" endtime="20230120 16:53:11.876"/>
+</return>
+<msg timestamp="20230120 16:53:11.877" level="INFO">${Titre} = Your store. Login</msg>
+<status status="PASS" starttime="20230120 16:53:06.285" endtime="20230120 16:53:11.877"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>css:Input[id="Email"]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230120 16:53:11.879" endtime="20230120 16:53:11.964"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:Input[id="Email"]</arg>
+<arg>admin@yourstore.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230120 16:53:11.966" level="INFO">Typing text 'admin@yourstore.com' into text field 'css:Input[id="Email"]'.</msg>
+<status status="PASS" starttime="20230120 16:53:11.965" endtime="20230120 16:53:12.128"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>css:Input[name="Password"]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230120 16:53:12.129" endtime="20230120 16:53:12.212"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:Input[name="Password"]</arg>
+<arg>admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230120 16:53:12.215" level="INFO">Typing text 'admin' into text field 'css:Input[name="Password"]'.</msg>
+<status status="PASS" starttime="20230120 16:53:12.213" endtime="20230120 16:53:12.312"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230120 16:53:12.313" level="INFO">Clicking button 'xpath://button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20230120 16:53:12.312" endtime="20230120 16:53:18.430"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230120 16:53:21.438" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230120 16:53:18.431" endtime="20230120 16:53:21.438"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230120 16:53:21.439" endtime="20230120 16:53:21.462"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Titre}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230120 16:53:21.463" endtime="20230120 16:53:21.464"/>
+</kw>
+<status status="PASS" starttime="20230120 16:53:06.257" endtime="20230120 16:53:21.464"/>
+</test>
+<status status="PASS" starttime="20230120 16:53:05.710" endtime="20230120 16:53:21.466"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Keyword Avec Return Argument">Keyword Avec Return Argument</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
